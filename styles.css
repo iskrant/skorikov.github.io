@@ -8,8 +8,18 @@ body {
   align-items: center;
   height: 100vh;
 }
-.tel {
-    width: 50%;
+/* .tel {
+    width: 25%;
+    height: auto;
+  } */
+
+/* .tel {
+    transform: scale(0.1);
+    transform-origin: top left;
+  } */
+
+  .tel {
+    width: 100px; /* например, если оригинал 200px */
     height: auto;
   }
 
