@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-color: #525252;
+  color: #FFC300;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  max-width: 900px;
+  border: 1px solid #FFC300;
+}
+
+.left, .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.qrcode {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+a {
+  color: #FFC300;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  width: 60%;
+  border: 1px solid #FFC300;
+  margin: 10px 0;
+}
+
+.bottom {
+  margin-top: 20px;
+}
