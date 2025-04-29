@@ -4,6 +4,7 @@ body {
   color: #FFC300;
   font-family: 'Courier New', Courier, monospace;
   display: flex;
+  flex-direction: column; /* <-- добавь это */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -12,19 +13,20 @@ body {
 }
 
 .gold-text {
-  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFFACD);
-  background-size: 200% 200%;
+  background: linear-gradient(to right, #ffd700, #ffec8b, #ffd700, #ffec8b, #ffd700);
+  background-size: 200% 100%;
+  color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2s linear infinite;
+  animation: shine 4s linear infinite;
 }
 
 @keyframes shine {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 0;
   }
   100% {
-    background-position: 100% 50%;
+    background-position: 200% 0;
   }
 }
 
@@ -98,6 +100,7 @@ h1 {
 
 p {
   margin: 5px 0;
+  font-size:x-large;
 }
 
 a {
@@ -123,5 +126,16 @@ hr {
 }
 
 .bottom {
+  margin-top: 20px;
+}
+
+.bottom-link {
+  flex-basis: 100%;
+  margin-top: 20px;
+}
+
+
+.top-text {
+  flex-basis: 100%;
   margin-top: 20px;
 }
