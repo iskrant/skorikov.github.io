@@ -7,7 +7,28 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+
 }
+
+.gold-text {
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFFACD);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
 /* .tel {
     width: 25%;
     height: auto;
@@ -21,20 +42,43 @@ body {
   .tel {
     width: 240px; /* например, если оригинал 200px */
     height: auto;
+     margin-left: -40px;
+     z-index: -1;
   }
 
 .card {
   display: flex;
   max-width: 900px;
-  border: 1px solid #FFC300;
+  border: 0px solid #FFC300;
 }
 
-.left, .right {
-  flex: 1;
+.left {
+  /* flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-items: center; */
+  width: 340px; /* например, если оригинал 200px */
+  height: auto;
+
+}
+
+.center {
+  /* flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  width: 500px; /* например, если оригинал 200px */
+  height: auto;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
 }
 
 .logo {
@@ -62,7 +106,14 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+
+  text-decoration: none;
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFFACD); */
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: shine 3s linear infinite;
 }
 
 hr {
