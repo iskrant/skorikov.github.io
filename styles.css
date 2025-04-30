@@ -4,12 +4,12 @@ body {
   color: #FFC300;
   font-family: 'Courier New', Courier, monospace;
   display: flex;
-  flex-direction: column; /* <-- добавь это */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
-
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .gold-text {
@@ -30,49 +30,42 @@ body {
   }
 }
 
-
-/* .tel {
-    width: 25%;
-    height: auto;
-  } */
-
-/* .tel {
-    transform: scale(0.1);
-    transform-origin: top left;
-  } */
-
-  .tel {
-    width: 240px; /* например, если оригинал 200px */
-    height: auto;
-     margin-left: -40px;
-     z-index: -1;
-  }
+.tel {
+  width: 240px;
+  height: auto;
+  margin-left: -10px;
+  z-index: -1;
+  max-width: 100%;
+}
 
 .card {
   display: flex;
+  flex-wrap: wrap;
   max-width: 900px;
   border: 0px solid #FFC300;
+  width: 100%;
 }
 
 .left {
-  /* flex: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: center; */
-  width: 340px; /* например, если оригинал 200px */
+  min-width: 280px;
+  max-width: 340px;
   height: auto;
-
 }
 
 .center {
-  /* flex: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; */
-  width: 500px; /* например, если оригинал 200px */
+  justify-content: center;
+  min-width: 280px;
+  max-width: 500px;
   height: auto;
+  padding: 0 10px;
 }
 
 .right {
@@ -86,32 +79,39 @@ body {
 .logo {
   width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 .qrcode {
   width: 180px;
   margin-bottom: 20px;
+  max-width: 100%;
 }
 
 h1 {
   margin: 0 0 10px 0;
   font-size: 24px;
+  text-align: center;
 }
 
 p {
   margin: 5px 0;
-  font-size:x-large;
+  font-size: x-large;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 a {
   color: #FFC300;
   text-decoration: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 a:hover {
-
   text-decoration: none;
-  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFFACD); */
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFFACD);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -130,12 +130,65 @@ hr {
 }
 
 .bottom-link {
-  flex-basis: 100%;
   margin-top: 20px;
+  width: 100%;
+  text-align: center;
 }
 
-
 .top-text {
-  flex-basis: 100%;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Медиа-запросы для адаптации под мобильные устройства */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 15px;
+    height: auto;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .center {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+    padding: 0;
+  }
+
+  .tel {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: large;
+  }
+
+  .qrcode {
+    width: 150px;
+    margin: 0 auto 15px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: medium;
+  }
+
+  .tel {
+    width: 180px;
+  }
+
+  .qrcode {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
 }
