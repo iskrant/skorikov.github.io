@@ -31,11 +31,13 @@ body {
 }
 
 .tel {
+  align-items: center;
   width: 240px;
   height: auto;
-  margin-left: -10px;
+  margin-left: 10px;
   z-index: -1;
   max-width: 100%;
+  align-self: center;
 }
 
 .card {
@@ -120,7 +122,8 @@ a:hover {
 }
 
 hr {
-  width: 60%;
+  align-self: center;
+  width: 95%;
   border: 1px solid #FFC300;
   margin: 10px 0;
 }
