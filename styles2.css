@@ -106,13 +106,24 @@ p {
 
 a {
   color: #FFC300;
-  text-decoration: none;
+  /* text-decoration: none; */
   word-wrap: break-word;
   overflow-wrap: break-word;
+
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Толщина линии */
+  text-underline-offset: 7px;     /* Отступ от текста */
+  text-decoration-color: #FFA500;    /* Цвет подчёркивания */
 }
 
 a:hover {
-  text-decoration: none;
+  /* text-decoration: none; */
+
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Толщина линии */
+  text-underline-offset: 6px;     /* Отступ от текста */
+  text-decoration-color: #FFA500;    /* Цвет подчёркивания */
+
   background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFFACD);
   background-size: 200% 200%;
   -webkit-background-clip: text;
